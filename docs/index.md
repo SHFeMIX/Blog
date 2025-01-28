@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Chrome DevTools 完全指南
-      link: /chrome-devtools/概览/README.md
+      link: /chrome-devtools/开始/简介.md
 
 features:
   - title: Feature A
