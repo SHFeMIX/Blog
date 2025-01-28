@@ -8,6 +8,12 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
+      text: JavaScript 高级程序设计
+      link: /
+    - theme: brand
+      text: CSS 权威指南
+      link: /
+    - theme: brand
       text: Chrome DevTools 完全指南
       link: /chrome-devtools/开始/简介.md
 
