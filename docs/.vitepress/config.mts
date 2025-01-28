@@ -48,7 +48,7 @@ export default defineConfig({
         {
           text: '源代码面板',
           items: [
-            { text: '查看和修改文件', link: '/chrome-devtools/源代码面板/查看和修改文件.md' },
+            { text: '查看和编辑文件', link: '/chrome-devtools/源代码面板/查看和编辑文件.md' },
             { text: '调试 JavaScript', link: '/chrome-devtools/源代码面板/调试JavaScript.md' },
             { text: '快捷键速查表', link: '/chrome-devtools/源代码面板/快捷键速查表.md' },
           ]
