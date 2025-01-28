@@ -11,7 +11,6 @@ export default defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: 'Home', link: '/' },
       { 
         text: 'Chrome DevTools 完全指南', 
         link: '/chrome-devtools/开始/简介.md',
