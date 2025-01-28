@@ -13,29 +13,11 @@ export default defineConfig({
     nav: [
       {
         text: 'Chrome DevTools 完全指南',
-        link: '/chrome-devtools/开始/简介.md',
-        activeMatch: '/chrome-devtools/'
-      },
-      {
-        text: 'Dropdown Menu',
         items: [
-          {
-            // 该部分的标题
-            text: 'Section A Title',
-            items: [
-              { text: 'Section A Item A', link: '...' },
-              { text: 'Section B Item B', link: '...' }
-            ]
-          },
-          {
-            // 该部分的标题
-            text: 'Section A Title',
-            items: [
-              { text: 'Section A Item A', link: '...' },
-              { text: 'Section B Item B', link: '...' }
-            ]
-          }
-        ]
+          { text: '深度指南', link: '/chrome-devtools/开始/简介.md'},
+          { text: '断点调试教程', link: '/chrome-devtools/源代码面板/调试JavaScript.md'}
+        ],
+        activeMatch: '/chrome-devtools/'
       }
     ],
 
