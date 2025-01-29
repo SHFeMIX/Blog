@@ -13,7 +13,7 @@ export default defineConfig({
     nav: [
       { text: 'JavaScript', link: '/' },
       { text: 'CSS', 
-        link: '/CSS权威指南/怎么看待CSS.md',
+        link: '/CSS权威指南/如何看待CSS.md',
         activeMatch: '/CSS权威指南/' 
       },
       {
