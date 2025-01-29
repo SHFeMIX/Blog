@@ -129,5 +129,6 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/SHFeMIX' }
     ]
   },
-  base: '/Blog/'
+  base: '/Blog/',
+  lastUpdated: true
 })
