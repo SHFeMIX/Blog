@@ -29,7 +29,8 @@ export default defineConfig({
           text: '开始',
           items: [
             { text: '简介', link: '/chrome-devtools/开始/简介.md' },
-            { text: '打开 DevTools', link: '/chrome-devtools/开始/打开DevTools.md' }
+            { text: '打开 DevTools', link: '/chrome-devtools/开始/打开DevTools.md' },
+            { text: '使用命令操作', link: '/chrome-devtools/开始/使用命令操作.md'}
           ]
         },
         {
