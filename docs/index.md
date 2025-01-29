@@ -14,6 +14,9 @@ hero:
       text: CSS 权威指南
       link: /CSS权威指南/如何看待CSS.md
     - theme: brand
+      text: Vue.js 设计与实现
+      link: /Vue.js 设计与实现/响应式系统/0 响应式数据基本实现.md
+    - theme: brand
       text: Chrome DevTools 完全指南
       link: /chrome-devtools/开始/简介.md
     - theme: brand

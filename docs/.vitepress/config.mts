@@ -16,6 +16,10 @@ export default defineConfig({
         link: '/CSS权威指南/如何看待CSS.md',
         activeMatch: '/CSS权威指南/' 
       },
+      { 
+        text: 'Vue.js 设计与实现',
+        link: '/Vue.js 设计与实现/响应式系统/0 响应式数据基本实现.md'
+      },
       {
         text: 'Chrome DevTools',
         items: [
@@ -121,6 +125,16 @@ export default defineConfig({
             { text: '特指度', link: '/CSS权威指南/3 特指度和层叠/3.1 特指度.md'},
             { text: '继承', link: '/CSS权威指南/3 特指度和层叠/3.2 继承.md'},
             { text: '层叠', link: '/CSS权威指南/3 特指度和层叠/3.3 层叠.md'},
+          ]
+        }
+      ],
+      'Vue.js 设计与实现': [
+        {
+          text: '响应式系统',
+          items: [
+            { text: '响应式数据基本实现', link: '/Vue.js 设计与实现/响应式系统/0 响应式数据基本实现.md'},
+            { text: 'effect 函数注册副作用', link: '/Vue.js 设计与实现/响应式系统/1 effect 函数注册副作用.md'},
+            { text: '建立副作用函数与被操作字段之间的联系', link: '/Vue.js 设计与实现/响应式系统/2 建立副作用函数与被操作字段之间的联系.md'}
           ]
         }
       ]
