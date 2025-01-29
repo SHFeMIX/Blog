@@ -24,10 +24,10 @@ hero:
       link: '/pro-git/1 起步/1.3 Git是什么.md'
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 
+    details: 基础技术是最值得你投入学习的，这个世界上没有什么东西比基础更值得花时间。 —— 左耳朵耗子。
+  - title: 
+    details: 学习就要学一手的资料，不要学二手的。 —— 左耳朵耗子。
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
