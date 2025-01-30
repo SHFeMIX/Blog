@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "My Blog"
-  text: "A VitePress Site"
+  text: "VitePress + Vue3 搭建"
   tagline: My great project tagline
   actions:
     - theme: brand
