@@ -75,6 +75,9 @@ function trigger(target, key) {
     // 如果这个对象的这个key没有被追踪的依赖，没有需要重新运行的副作用函数，啥也不干
     // 否则就把 effects 中的函数依次执行
     effects && effects.forEach(effect => effect())
+
+    // 使用 .? 可选链操作符，也可以写成这样
+    // bucket.get(target)?.get(key)?.forEach(effect => effect())
 }
 ```
 
