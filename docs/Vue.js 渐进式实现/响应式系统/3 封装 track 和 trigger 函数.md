@@ -4,7 +4,7 @@
 同样的，set 中**触发**副作用函数重新执行的逻辑也可以封装到 trigger 函数中。
 
 ## 代码
-```javascript{20,29,35-59,61-71}
+```javascript{20,29,35-59,61-74}
 // 用一个全局变量存储被注册的副作用函数
 let activeEffect
 // effect 函数用于注册副作用函数
@@ -76,7 +76,7 @@ function trigger(target, key) {
     // 否则就把 effects 中的函数依次执行
     effects && effects.forEach(effect => effect())
 
-    // 使用 .? 可选链操作符，也可以写成这样
+    // 使用 ?. 可选链操作符，也可以写成这样
     // bucket.get(target)?.get(key)?.forEach(effect => effect())
 }
 ```
