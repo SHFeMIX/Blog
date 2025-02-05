@@ -140,6 +140,13 @@ export default defineConfig({
             { text: '位置', link: '/CSS权威指南/4 值和单位/4.9 位置.md'}, 
             { text: '自定义值', link: '/CSS权威指南/4 值和单位/4.10 自定义值.md'},
           ]
+        },
+        {
+          text: '字体',
+          items: [
+            { text: '字体族', link: '/CSS权威指南/5 字体/5.1 字体族.md'},
+            { text: '自定义字体', link: '/CSS权威指南/5 字体/5.2 自定义字体.md'},
+          ]
         }
       ],
       'Vue.js 渐进式实现': [
