@@ -1,4 +1,4 @@
-# 打开 Chrome DevTools
+# 打开 DevTools
 
 ## 检查 DOM 或 CSS
 右键点击网页上的元素，然后选择**检查**。DevTools 会打开**元素**面板，并在 DOM 树中选中相应元素。
