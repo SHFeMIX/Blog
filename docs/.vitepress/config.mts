@@ -34,7 +34,7 @@ export default defineConfig({
     sidebar: {
       '/chrome-devtools/': [
         {
-          text: '开始',
+          text: '快速开始',
           items: [
             { text: '简介', link: '/chrome-devtools/开始/简介.md' },
             { text: '打开 DevTools', link: '/chrome-devtools/开始/打开DevTools.md' },
