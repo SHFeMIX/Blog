@@ -22,6 +22,9 @@ hero:
     - theme: brand
       text: Pro Git
       link: '/pro-git/1 起步/1.3 Git是什么.md'
+  image:
+      src: https://vitepress.dev/vitepress-logo-large.webp
+      alt: VitePress
 
 features:
   - title: 
