@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: [['link', { rel: 'icon', href: 'https://vitepress.dev/vitepress-logo-mini.svg' }]],
   title: "My Blog",
   description: "A VitePress Site",
   themeConfig: {
