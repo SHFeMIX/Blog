@@ -79,7 +79,7 @@
         width: 2px;
         height: 10px;
         background-color: black;
-        transform-origin: 0 50px;
+        transform-origin: center 50px;
     }
 
     .line:nth-child(1) {
