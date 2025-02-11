@@ -37,12 +37,12 @@
         clockElement.style.transform = `rotate(${degrees}deg)`;
 
         const min = now.getMinutes();
-        const degreesMin = min * 6;
+        const degreesMin = min * 6 + seconds / 60 * 6;
         const minElement = document.getElementById('min');
         minElement.style.transform = `rotate(${degreesMin}deg)`;
 
         const hour = now.getHours();
-        const degreesHour = hour * 30;
+        const degreesHour = hour * 30 + min / 60 * 30
         const hourElement = document.getElementById('hour');
         hourElement.style.transform = `rotate(${degreesHour}deg)`;
     })
