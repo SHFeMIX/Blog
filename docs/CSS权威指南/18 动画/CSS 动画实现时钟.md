@@ -151,7 +151,7 @@
 
 #hour {
     >div {
-        padding-top: 28px;
+        border-top: solid transparent 28px;
         width: 2px;
         height: 25px;
         background-color: black;
@@ -163,7 +163,7 @@
 
 #min {
     >div {
-        padding-top: 18px;
+        border-top: solid transparent 18px;
         width: 2px;
         height: 35px;
         background-color: black;
@@ -175,7 +175,7 @@
 
 #sec {
     >div {
-        padding-top: 3px;
+        border-top: solid transparent 3px;
         width: 1px;
         height: 50px;
         background-color: red;

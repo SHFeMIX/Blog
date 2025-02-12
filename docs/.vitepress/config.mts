@@ -62,6 +62,12 @@ export default defineConfig({
             { text: '调试 JavaScript', link: '/chrome-devtools/源代码面板/调试JavaScript.md' },
             { text: '快捷键速查表', link: '/chrome-devtools/源代码面板/快捷键速查表.md' },
           ]
+        },
+        {
+          text: '其他更多面板',
+          items: [
+            { text: '使用 Animations 面板调试 CSS 动画', link: '/chrome-devtools/其他更多面板/使用 Animations 面板调试 CSS 动画.md' }
+          ]
         }
       ],
       '/pro-git/': [
