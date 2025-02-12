@@ -15,15 +15,15 @@
 </div>
 
 <div id="hour">
-    <div></div>
+    <div></div><div></div>
 </div>
 
 <div id="min">
-    <div></div>
+    <div></div><div></div>
 </div>
 
 <div id="sec">
-    <div></div>
+    <div></div><div></div>
 </div>
 
 <script setup>
@@ -136,52 +136,63 @@
 }
 
 #hour,
-#min,
-#sec {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 106px;
-    height: 106px;
+    #min,
+    #sec {
+        position: absolute;
+        top: 103px;
+        left: 103px;
+        width: 100px;
+        height: 100px;
 
-    >div {
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        >div {
+            margin: 0 auto;
+        }
     }
-}
 
-#hour {
-    >div {
-        border-top: solid transparent 28px;
-        width: 2px;
-        height: 25px;
-        background-color: black;
+    #hour {
+        >div:first-child {
+            width: 2px;
+            background-color: black;
 
-        transform-origin: center 100%;
-        animation: rotate 86400s linear infinite;
+            transform-origin: center 100%;
+            animation: rotate 86400s linear infinite;
+        }
+
+        >div {
+            height: 25px;
+        }
     }
-}
 
-#min {
-    >div {
-        border-top: solid transparent 18px;
-        width: 2px;
-        height: 35px;
-        background-color: black;
+    #min {
+        >div:first-child {
+            width: 2px;
+            background-color: black;
 
-        transform-origin: center 100%;
-        animation: rotate 3600s linear infinite;
+            transform-origin: center 100%;
+            animation: rotate 3600s linear infinite;
+        }
+
+        >div {
+            height: 35px;
+        }
     }
-}
 
-#sec {
-    >div {
-        border-top: solid transparent 3px;
-        width: 1px;
-        height: 50px;
-        background-color: red;
+    #sec {
+        >div:first-child {
+            width: 1px;
+            background-color: red;
 
-        transform-origin: center 100%;
-        animation: rotate 60s steps(60, end) infinite;
+            transform-origin: center 100%;
+            animation: rotate 60s steps(60, end) infinite;
+        }
+
+        >div {
+            height: 50px;
+        }
     }
-}
 </style>
