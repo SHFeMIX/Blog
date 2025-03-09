@@ -184,7 +184,8 @@ export default defineConfig({
             { text: '响应式数据基本实现', link: '/Vue.js 渐进式实现/响应式系统/0 响应式数据基本实现.md'},
             { text: 'effect 函数注册副作用', link: '/Vue.js 渐进式实现/响应式系统/1 effect 函数注册副作用.md'},
             { text: '建立副作用函数与被操作字段之间的联系', link: '/Vue.js 渐进式实现/响应式系统/2 建立副作用函数与被操作字段之间的联系.md'},
-            { text: '封装 track 和 trigger 函数', link: '/Vue.js 渐进式实现/响应式系统/3 封装 track 和 trigger 函数.md'}
+            { text: '封装 track 和 trigger 函数', link: '/Vue.js 渐进式实现/响应式系统/3 封装 track 和 trigger 函数.md'},
+            { text: '分支切换与 cleanup', link: '/Vue.js 渐进式实现/响应式系统/4 分支切换与 cleanup.md'}
           ]
         }
       ]
