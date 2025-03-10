@@ -86,10 +86,10 @@ const obj = new Proxy(data, {
         // 把副作用函数收集到桶中
         track(traget, key)
         // 返回属性值
-        retrun target[key]
+        return target[key]
     },
     // 拦截设置操作
-    set(target, key newVal) {
+    set(target, key, newVal) {
         // 设置属性值
         target[key] = newVal
         // 把副作用函数从桶里取出并执行
@@ -145,3 +145,9 @@ function trigger(target, key) {
     // bucket.get(target)?.get(key)?.forEach(effect => effect())
 }
 ```
+
+## 已实现
+通过副作用函数每次执行前先把它从所有与之关联的依赖集合中删除，然后在执行过程中重新进行一次依赖收集，我们解决了副作用函数内有代码分支时分支切换可能会产生遗留的副作用函数的问题。
+
+## 缺陷/待实现
+effect 是可能发生嵌套的，而我们现在的响应式系统还不支持这一点。
