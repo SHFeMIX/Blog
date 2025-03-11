@@ -65,7 +65,7 @@ effect(function effectFn1() {
 
 当副作用函数发生嵌套，注册内层副作用函数会覆盖原有 activeEffect 也就是外层的副作用函数并且永远不会恢复，因此后续如果再有依赖被访问，收集进集合的永远是内层副作用函数，哪怕这个访问操作是在外层副作用函数内执行的。
 
-### 解决思路
+### 如何解决
 解决这个问题，我们需要一个副作用函数栈 effectStack。
 
 在副作用函数执行时，将它压入栈中，执行完毕弹出，而 activeEffect 始终指向栈顶。
@@ -78,7 +78,7 @@ effect(function effectFn1() {
 let activeEffect
 
 // 新增 effect 栈
-const efectStack = []
+const effectStack = []
 
 // effect 函数用于注册副作用函数
 function effect(fn) {
@@ -91,15 +91,15 @@ function effect(fn) {
         activeEffect = effectFn
 
         // 调用真实副作用函数之前，先将当前 effect 压入栈中
-        efectStack.push(effectFn)
+        effectStack.push(effectFn)
 
         // 在 fn 这次执行中，effectFn 会作为副作用函数被收集到 fn 读取了的依赖的集合中
         fn()
 
         // 当前副作用函数执行完毕之后，弹出栈
-        efectStack.pop()
+        effectStack.pop()
         // 并把 activeEffect 还原为之前的值
-        activeEffect = efectStack[efectStack.length - 1]
+        activeEffect = effectStack[effectStack.length - 1]
     }
 
     // effctFn.deps 数组用来储存该副作用函数的所有依赖集合
@@ -129,7 +129,7 @@ const obj = new Proxy(data, {
     // 拦截读取操作
     get(target, key) {
         // 把副作用函数收集到桶中
-        track(traget, key)
+        track(target, key)
         // 返回属性值
         return target[key]
     },
@@ -193,3 +193,6 @@ function trigger(target, key) {
 
 ## 已实现
 我们通过新增一个 effectStack，在副作用函数执行前将它压入栈中，执行且依赖收集结束后弹出，且activeEffect 始终指向栈顶，解决了 effect 嵌套调用时依赖收集混乱的问题。
+
+## 缺陷/待实现
+当一个副作用函数先读又写了某个依赖字段，会产生无限递归循环，导致栈溢出。
