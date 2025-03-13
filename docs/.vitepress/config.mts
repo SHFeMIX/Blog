@@ -188,6 +188,7 @@ export default defineConfig({
             { text: '分支切换与 cleanup', link: '/Vue.js 渐进式实现/响应式系统/4 分支切换与 cleanup.md'},
             { text: '嵌套的 effect 与 effect 栈', link: '/Vue.js 渐进式实现/响应式系统/5 嵌套的 effect 与 effect 栈.md'},
             { text: '避免无限递归循环', link: '/Vue.js 渐进式实现/响应式系统/6 避免无限递归循环.md' },
+            { text: '调度执行', link: '/Vue.js 渐进式实现/响应式系统/7 调度执行.md' },
           ]
         }
       ]
