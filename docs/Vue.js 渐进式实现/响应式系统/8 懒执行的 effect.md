@@ -10,7 +10,7 @@
 function effect(fn, options = {}) {
     const effectFn = () => {
         cleanup(effectFn)
-        activeEfect = effectFn
+        activeEffect = effectFn
         effectStack.push(effectFn)
         fn()
         effectStack.pop()
@@ -41,7 +41,7 @@ effectFn()
 
 我们如果把副作用函数看成一个 getter，并且希望手动执行的时候获取到它的返回值：
 ```js
-const effectFn = efect(
+const effectFn = effect(
     // getter 返回 obj.foo 与 obj.bar 的和
     () => obj.foo + obj.bar,
     { lazy: true }

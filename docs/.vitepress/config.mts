@@ -190,6 +190,7 @@ export default defineConfig({
             { text: '避免无限递归循环', link: '/Vue.js 渐进式实现/响应式系统/6 避免无限递归循环.md' },
             { text: '基础调度执行', link: '/Vue.js 渐进式实现/响应式系统/7 基础调度执行.md' },
             { text: '懒执行的 effect', link: '/Vue.js 渐进式实现/响应式系统/8 懒执行的 effect.md' },
+            { text: '计算属性与缓存', link: '/Vue.js 渐进式实现/响应式系统/9 计算属性与缓存.md' },
           ]
         }
       ]
