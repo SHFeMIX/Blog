@@ -210,6 +210,18 @@ export default defineConfig({
             items: []
           }]
         },
+        {
+          text: '渲染器',
+          items: []
+        },
+        {
+          text: '组件化',
+          items: []
+        },
+        {
+          text: '编译器',
+          items: []
+        }
       ]
     },
     socialLinks: [
