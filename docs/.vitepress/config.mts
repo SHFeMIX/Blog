@@ -191,6 +191,7 @@ export default defineConfig({
             { text: '基础调度执行', link: '/Vue.js 渐进式实现/响应式系统/7 基础调度执行.md' },
             { text: '懒执行的 effect', link: '/Vue.js 渐进式实现/响应式系统/8 懒执行的 effect.md' },
             { text: '计算属性与缓存', link: '/Vue.js 渐进式实现/响应式系统/9 计算属性与缓存.md' },
+            { text: '计算属性的 track 和 trigger', link: '/Vue.js 渐进式实现/响应式系统/10 计算属性的 track 和 trigger.md' },
           ]
         }
       ]
