@@ -179,7 +179,7 @@ export default defineConfig({
       ],
       'Vue.js 渐进式实现': [
         {
-          text: '响应式系统',
+          text: '基础的响应式系统',
           items: [
             { text: '响应式数据基本实现', link: '/Vue.js 渐进式实现/响应式系统/0 响应式数据基本实现.md'},
             { text: 'effect 函数注册副作用', link: '/Vue.js 渐进式实现/响应式系统/1 effect 函数注册副作用.md'},
@@ -193,6 +193,14 @@ export default defineConfig({
             { text: '计算属性与缓存', link: '/Vue.js 渐进式实现/响应式系统/9 计算属性与缓存.md' },
             { text: '计算属性的 track 和 trigger', link: '/Vue.js 渐进式实现/响应式系统/10 计算属性的 track 和 trigger.md' },
           ]
+        },
+        {
+          text: '非原始值的响应式方案',
+          items: []
+        },
+        {
+          text: '原始值的响应式方案',
+          items: []
         }
       ]
     },
