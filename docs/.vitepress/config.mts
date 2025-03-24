@@ -197,7 +197,7 @@ export default defineConfig({
               { text: '懒执行的 effect', link: '/Vue.js 渐进式实现/响应式系统/8 懒执行的 effect.md' },
               { text: '计算属性与缓存', link: '/Vue.js 渐进式实现/响应式系统/9 计算属性与缓存.md' },
               { text: '计算属性的 track 和 trigger', link: '/Vue.js 渐进式实现/响应式系统/10 计算属性的 track 和 trigger.md' },
-              { text: 'watch 的基本实现原理', link: '/Vue.js 渐进式实现/响应式系统/11 watch 的实现原理.md' },
+              { text: 'watch 的基本实现原理', link: '/Vue.js 渐进式实现/响应式系统/11 watch 的基本实现原理.md' },
               { text: '立即执行的 watch 与回调执行时机', link: '/Vue.js 渐进式实现/响应式系统/12 立即执行的 watch 与回调执行时机.md' },
             ]
           },
