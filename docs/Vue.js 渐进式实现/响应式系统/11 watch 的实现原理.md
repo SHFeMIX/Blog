@@ -87,12 +87,8 @@ function watch(source, cb) {
 }
 ```
 
-
-## 已实现
-目前我们实现了基本的 watch 功能，支持监听对象的任意属性变化，也支持接收 getter 函数。
-
-## 缺陷/待实现
-在使用 Vue.js 的 watch 时，能够在回调函数中得到变化前后的值：
+### 获取新值和旧值
+在使用 Vue.js 的 watch 时，有一个非常重要的功能，那就是能够在回调函数中得到变化前后的值：
 ```js
 watch(
     () => source.foo,
@@ -101,4 +97,42 @@ watch(
     }
 )
 ```
-这是非常重要的能力，目前我们的 watch 还不支持这一点。
+实现这一功能，需要充分利用 effect 函数的 lazy 选项。每次监听的数据更新时手动调用 effect 函数的返回值 effectFn 获取更新后的响应式数据的值，而上一次调用 effectFn 的结果则作为旧值：
+```js{9,11-12,16,18-23,28-29}
+function watch(source, cb) {
+    let getter
+    if (typeof source === 'function') {
+        getter = source
+    } else {
+        getter = () => traverse(source)
+    }
+
+    let oldValue, newValue
+
+    // 使用 effect 注册副作用函数，开启 lazy 选项，把返回值储存在 effectFn 中以便之后手动调用
+    const effectFn = effect(
+        // 直接传 getter 行不行呢
+        () => getter(),
+        {
+            lazy: true,
+            scheduler() {
+                // 在 scheduler 中重新执行副作用函数，获取新值
+                newValue = effectFn()
+                // 将新值和旧值作为回调函数的参数
+                cb(newValue, oldValue)
+                // 更新旧值
+                oldValue = newValue
+            }
+        }
+    )
+
+    // 手动调用副作用函数，拿到的就是初始旧值
+    oldValue = effectFn()
+}
+```
+上述代码最下面的部分，我们手动调用 efectFn 得到的返回值就是旧值，即第一次执行得到的值。当变化发生并触发 scheduler 调度函数执行时，会重新调用 effectFn 并得到新值。这样我们就拿到了新值和旧值，进而传给回调函数。最后不要忘了用新值更新旧值：oldValue = newValue，毕竟本次更新后的新值时下一次更新后的旧值。
+
+## 已实现
+目前我们实现了基本的 watch 功能，支持监听对象的任意属性变化，也支持接收 getter 函数，并且回调函数中也能获取到监听的数据的新值和旧值。
+
+## 缺陷/待实现
