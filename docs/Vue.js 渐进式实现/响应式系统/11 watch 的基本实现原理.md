@@ -13,6 +13,11 @@ function watch(source, cb) {
             scheduler() {
                 // source 有变化时，执行cb
                 cb()
+                /*
+                其实这里应该执行一次传递给 scheduler 的副作用函数，不然无法解决分支切换遗留副作用函数的问题  
+                被收集进依赖集合的并会传给 scheduler 的，effect 返回的，都是 effectFn
+                调用 effectFn 才是再次依赖收集
+                */
             }
         }
     )
