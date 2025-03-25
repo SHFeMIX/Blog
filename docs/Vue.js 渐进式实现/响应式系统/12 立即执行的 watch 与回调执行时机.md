@@ -31,7 +31,7 @@ function watch(source, cb, options = {}) {
 
     // 提取 scheduler 为一个独立的 job 函数
     const job = () => {
-        newValue = getter()
+        newValue = effectFn()
         cb(newValue, oldValue)
         oldValue = newValue
     }
