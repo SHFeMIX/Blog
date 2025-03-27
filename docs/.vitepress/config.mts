@@ -183,7 +183,7 @@ export default defineConfig({
         {
           text: '响应式系统',
           items: [{
-            text: '基础的响应式系统',
+            text: '响应式系统的作用与实现',
             collapsed: true,
             items: [
               { text: '响应式数据基本实现', link: '/Vue.js 渐进式实现/响应式系统/0 响应式数据基本实现.md' },
