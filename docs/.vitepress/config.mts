@@ -199,7 +199,8 @@ export default defineConfig({
               { text: '计算属性的 track 和 trigger', link: '/Vue.js 渐进式实现/响应式系统/10 计算属性的 track 和 trigger.md' },
               { text: 'watch 的基本实现原理', link: '/Vue.js 渐进式实现/响应式系统/11 watch 的基本实现原理.md' },
               { text: '立即执行的 watch 与回调执行时机', link: '/Vue.js 渐进式实现/响应式系统/12 立即执行的 watch 与回调执行时机.md' },
-              { text: '过期的副作用', link: '/Vue.js 渐进式实现/响应式系统/13 过期的副作用.md' }
+              { text: '过期的副作用', link: '/Vue.js 渐进式实现/响应式系统/13 过期的副作用.md' },
+              { text: '总结', link: '/Vue.js 渐进式实现/响应式系统/14 总结.md'}
             ]
           },
           {
