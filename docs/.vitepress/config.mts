@@ -19,7 +19,7 @@ export default defineConfig({
         activeMatch: '/CSS权威指南/'
       },
       {
-        text: 'Vue.js',
+        text: 'Vue.js 渐进式实现',
         link: '/Vue.js 渐进式实现/响应式系统/0 响应式数据基本实现.md'
       },
       {
