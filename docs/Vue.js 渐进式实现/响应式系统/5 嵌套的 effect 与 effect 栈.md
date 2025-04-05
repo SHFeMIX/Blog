@@ -12,7 +12,7 @@ const Bar = {
 
 const Foo = {
     render() {
-        retrun <Bar />
+        return <Bar />
     }
 }
 ```

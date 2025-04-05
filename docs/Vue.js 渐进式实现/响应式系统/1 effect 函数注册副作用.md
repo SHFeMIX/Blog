@@ -29,7 +29,7 @@ const obj = new Proxy(data, {
             bucket.add(activeEffect)
         }
         // 返回属性值
-        retrun target[key]
+        return target[key]
     },
     // 拦截设置操作
     set(target, key newVal) {

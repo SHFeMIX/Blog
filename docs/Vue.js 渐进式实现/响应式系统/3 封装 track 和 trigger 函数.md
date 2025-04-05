@@ -26,7 +26,7 @@ const obj = new Proxy(data, {
         // 把副作用函数收集到桶中
         track(traget, key)
         // 返回属性值
-        retrun target[key]
+        return target[key]
     },
     // 拦截设置操作
     set(target, key newVal) {
