@@ -80,9 +80,9 @@ obj 的 bar 属性是一个访问器属性，它返回了 this.foo 的值。接�
 Reflect 就能做到这一点。
 
 #### Reflect 的能力
-比如 13 种基本方法中的 [[Get]] 和 [[Set]] 方法，ES6 官方文档规定了它们接收的最后一个参数 Receiver 是：如果检索或设置属性值时需要执行代码，代码执行时候的 this 值。
+比如 13 种基本方法中的 [[Get]] 和 [[Set]] 方法，ES6 官方文档规定了它们接收的最后一个参数 Receiver 是：如果检索或设置属性值时需要执行代码，代码执行时候的 this 值。这里说的 “如果检索或设置属性值时需要执行代码”，其实就是对象的 getter 和 setter。
 
-这里说的 “如果检索或设置属性值时需要执行代码”，其实就是对象的 getter 和 setter。当访问对象的 getter 和 setter 需要指定方法的 this 值时，就必须且只能使用 Reflect 直接调用底层的 [[Get]] 和 [[Set]] 方法，手动传入 Receiver 参数。
+当访问对象的 getter 和 setter 需要指定方法的 this 值时，就必须且只能使用 Reflect 直接调用底层的 [[Get]] 和 [[Set]] 方法，手动传入 Receiver 参数。
 
 #### 如何正确建立联系
 而 Proxy 的拦截函数的最后一个参数 receiver，表示的是谁在操作属性，一般是代理对象本身。
