@@ -34,7 +34,6 @@ Reflect.apply() // 对应 [[Call]] 方法
 那么问题来了，Vue.js 3 的响应式系统为什么一定要用 Reflect？比如读取属性，只能用 Reflect.get 方法，不能直接 obj[key] 吗？
 
 ### 不用 Reflect 的问题
-#### 现象
 举个例子：
 ```js
 const obj = {
@@ -66,7 +65,7 @@ obj 的 bar 属性是一个访问器属性，它返回了 this.foo 的值。接�
 
 然而事实并非如此。尝试修改 p.foo 的值，副作用函数并不会重新执行。
 
-#### 原因
+#### 分析原因
 如果我们希望副作用函数与 foo 属性之间建立响应联系，那副作用函数必须访问到代理对象 p 的 foo 属性。
 
 在 get 拦截函数内，通过 target[key] 返回属性值。其中 target 是原始对象 obj，key 是字符串 'bar'，所以 target[key] 等价于 obj.bar。
