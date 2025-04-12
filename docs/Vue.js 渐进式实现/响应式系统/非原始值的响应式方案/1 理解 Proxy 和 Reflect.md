@@ -59,7 +59,7 @@ effect(() => {
     console.log(p.bar)
 })
 ```
-obj 的 bar 属性是一个访问器属性，它返回了 this.foo 的值。接着，我们在 effect 副作用函数中通过代理对象 p 访问 bar 属性。当 effect 注册的副作用函数执行时，会读取 p.bar 属性。
+obj 的 bar 属性是一个访问器属性，它返回了 this.foo 的值。接着，我们在 effect 注册的副作用函数中通过代理对象 p 访问 bar 属性。
 
 由于 p.bar 是一个访问器属性，实际上读取的是 foo 属性。因此我们希望副作用函数与 foo 属性之间建立响应联系，当 foo 属性被修改时，副作用函数重新执行。
 
