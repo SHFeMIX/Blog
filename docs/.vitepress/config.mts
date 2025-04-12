@@ -20,7 +20,7 @@ export default defineConfig({
       },
       {
         text: 'Vue.js 渐进式实现',
-        link: '/Vue.js 渐进式实现/响应式系统/0 响应式数据基本实现.md'
+        link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/0 响应式数据基本实现.md'
       },
       {
         text: 'Chrome DevTools',
@@ -186,21 +186,21 @@ export default defineConfig({
             text: '响应式系统的作用与实现',
             collapsed: true,
             items: [
-              { text: '响应式数据基本实现', link: '/Vue.js 渐进式实现/响应式系统/0 响应式数据基本实现.md' },
-              { text: 'effect 函数注册副作用', link: '/Vue.js 渐进式实现/响应式系统/1 effect 函数注册副作用.md' },
-              { text: '建立副作用函数与被操作字段之间的联系', link: '/Vue.js 渐进式实现/响应式系统/2 建立副作用函数与被操作字段之间的联系.md' },
-              { text: '封装 track 和 trigger 函数', link: '/Vue.js 渐进式实现/响应式系统/3 封装 track 和 trigger 函数.md' },
-              { text: '分支切换与 cleanup', link: '/Vue.js 渐进式实现/响应式系统/4 分支切换与 cleanup.md' },
-              { text: '嵌套的 effect 与 effect 栈', link: '/Vue.js 渐进式实现/响应式系统/5 嵌套的 effect 与 effect 栈.md' },
-              { text: '避免无限递归循环', link: '/Vue.js 渐进式实现/响应式系统/6 避免无限递归循环.md' },
-              { text: '基础调度执行', link: '/Vue.js 渐进式实现/响应式系统/7 基础调度执行.md' },
-              { text: '懒执行的 effect', link: '/Vue.js 渐进式实现/响应式系统/8 懒执行的 effect.md' },
-              { text: '计算属性与缓存', link: '/Vue.js 渐进式实现/响应式系统/9 计算属性与缓存.md' },
-              { text: '计算属性的 track 和 trigger', link: '/Vue.js 渐进式实现/响应式系统/10 计算属性的 track 和 trigger.md' },
-              { text: 'watch 的基本实现原理', link: '/Vue.js 渐进式实现/响应式系统/11 watch 的基本实现原理.md' },
-              { text: '立即执行的 watch 与回调执行时机', link: '/Vue.js 渐进式实现/响应式系统/12 立即执行的 watch 与回调执行时机.md' },
-              { text: '过期的副作用', link: '/Vue.js 渐进式实现/响应式系统/13 过期的副作用.md' },
-              { text: '总结', link: '/Vue.js 渐进式实现/响应式系统/14 总结.md'}
+              { text: '响应式数据基本实现', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/0 响应式数据基本实现.md' },
+              { text: 'effect 函数注册副作用', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/1 effect 函数注册副作用.md' },
+              { text: '建立副作用函数与被操作字段之间的联系', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/2 建立副作用函数与被操作字段之间的联系.md' },
+              { text: '封装 track 和 trigger 函数', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/3 封装 track 和 trigger 函数.md' },
+              { text: '分支切换与 cleanup', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/4 分支切换与 cleanup.md' },
+              { text: '嵌套的 effect 与 effect 栈', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/5 嵌套的 effect 与 effect 栈.md' },
+              { text: '避免无限递归循环', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/6 避免无限递归循环.md' },
+              { text: '基础调度执行', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/7 基础调度执行.md' },
+              { text: '懒执行的 effect', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/8 懒执行的 effect.md' },
+              { text: '计算属性与缓存', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/9 计算属性与缓存.md' },
+              { text: '计算属性的 track 和 trigger', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/10 计算属性的 track 和 trigger.md' },
+              { text: 'watch 的基本实现原理', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/11 watch 的基本实现原理.md' },
+              { text: '立即执行的 watch 与回调执行时机', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/12 立即执行的 watch 与回调执行时机.md' },
+              { text: '过期的副作用', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/13 过期的副作用.md' },
+              { text: '总结', link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/14 总结.md'}
             ]
           },
           {
