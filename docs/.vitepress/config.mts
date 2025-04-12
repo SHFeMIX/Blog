@@ -206,7 +206,9 @@ export default defineConfig({
           {
             text: '非原始值的响应式方案',
             collapsed: true,
-            items: []
+            items: [
+              { text: '理解 Proxy 和 Reflect', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/1 理解 Proxy 和 Reflect.md' }
+            ]
           },
           {
             text: '原始值的响应式方案',
