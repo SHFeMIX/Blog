@@ -5,7 +5,7 @@
 ### 什么是懒执行的 effect
 懒执行的 effect，即 lazy 的 effect，指的是有些场景下，我们不希望调用 effect 函数后立刻执行传入的副作用函数，而是等到真正需要的时候再执行。
 
-为此，我们可以为 effect 的options 参数添加一个 lazy 选项。有了它，我们就可以修改 effect 函数的实现逻辑，当 options.lazy 为 true 时，则不立即执行副作用函数
+为此，我们可以为 effect 的 options 参数添加一个 lazy 选项。有了它，我们就可以修改 effect 函数的实现逻辑，当 options.lazy 为 true 时，则不立即执行副作用函数。
 ```js{14-18}
 function effect(fn, options = {}) {
     const effectFn = () => {
@@ -51,7 +51,7 @@ const effectFn = effect(
 const value = effectFn()
 ```
 
-为了实现这一目标，我们需要再对 effect 函数做一些修改
+为了实现这一目标，我们需要再对 effect 函数做一些修改：
 ```js{6-7,10-11}
 function effect(fn, options = {}) {
     const effectFn = () => {
