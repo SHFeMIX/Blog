@@ -92,3 +92,9 @@ const p = new Proxy(obj, {
 拦截 ownKeys 操作即可间接拦截 for...in 循环。
 
 为什么我们要使用 ITERATE_KEY 作为追踪的key，因为在 ownKeys 中无法获取到具体操作的 key。ownKeys 用来获取一个对象的所有属于自己的键，这个操作明显不与任何具体的键绑定，因此我们只能用 Symbol 构造一个唯一 key 作为标识。
+
+## 已实现
+我们分别通过 get、has、ownKeys 三个陷阱函数拦截了对一个 Object 所有可能的读取操作。
+
+## 缺陷/待实现
+下一节我们将讨论如何拦截对一个 Object 的所有可能的修改操作。
