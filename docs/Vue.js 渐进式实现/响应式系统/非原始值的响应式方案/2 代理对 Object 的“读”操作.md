@@ -65,7 +65,7 @@ const p = new Proxy(obj, {
 
 其中关键点在于这个方法内部使用了 Reflect.ownKeys(obj) 来获取只属于对象自身拥有的键。
 
-因此我们可以使用 ownKeys 这个陷阱函数拦截 for...in 循环（内部的 Reflect.ownKeys 操作）：
+因此我们可以使用 ownKeys 这个陷阱函数拦截 for...in 循环：
 ```js
 const obj = { foo: 1 }
 const ITERATE_KEY = Symbol()
