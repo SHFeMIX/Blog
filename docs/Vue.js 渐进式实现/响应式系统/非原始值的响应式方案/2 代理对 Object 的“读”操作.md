@@ -80,28 +80,6 @@ function reactive(obj) {
 
 因此我们可以使用 ownKeys 这个陷阱函数拦截 for...in 循环：
 ```js
-const obj = { foo: 1 }
-const ITERATE_KEY = Symbol()
-
-const p = new Proxy(obj, {
-    get (target, key, receiver) {
-        // 依赖收集
-        track(target, key)
-        // 返回属性值
-        return Reflect.get(target, key, receiver)
-    },
-
-    has (target, key, receiver) {
-        track(target, key)
-        return Reflect.has(target, key, receiver)
-    },
-
-    ownKeys (target) {
-        track(target, ITERATE_KEY)
-        return Reflect.ownKeys(target)
-    }
-})
-
 function reactive(obj) {
     return new Proxy(obj, {
         get (target, key, receiver) {
