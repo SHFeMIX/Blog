@@ -53,7 +53,7 @@ function reactive(obj) {
 从第三步中可以看到 HasProperty 抽象方法的返回值是通过调用对象内部的基本方法 [[HasProperty]] 得到的。
 
 而 [[HasProperty]] 方法对应的陷阱函数叫 has，因此我们可以通过 has 陷阱函数实现对 in 操作符的拦截：
-```js
+```js{10-13}
 function reactive(obj) {
     return new Proxy(obj, {
         get (target, key, receiver) {
@@ -79,7 +79,7 @@ function reactive(obj) {
 其中关键点在于这个方法内部使用了 Reflect.ownKeys(obj) 来获取只属于对象自身拥有的键。
 
 因此我们可以使用 ownKeys 这个陷阱函数拦截 for...in 循环：
-```js
+```js{15-18}
 function reactive(obj) {
     return new Proxy(obj, {
         get (target, key, receiver) {
