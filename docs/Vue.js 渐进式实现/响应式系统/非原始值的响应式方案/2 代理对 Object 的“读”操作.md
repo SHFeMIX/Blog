@@ -11,19 +11,32 @@
 我们逐步讨论如何拦截这些读取操作。
 
 ## 思路
+
+### reactive
+开始之前，为了后续讲解方便，我们需要封装一个reactive 函数。
+
+reactive 函数接收一个对象作为参数，返回为其创建的响应式数据：
+```js
+function reactive(obj) {
+    return new Proxy(obj, {
+        /* ... */
+    })
+}
+```
+
 ### 拦截读取属性
 对于属性的读取，我们知道可以通过 get 陷阱函数拦截。
 ```js
-const obj = { foo: 1 }
-
-const p = new Proxy(obj, {
-    get (target, key, receiver) {
-        // 依赖收集
-        track(target, key)
-        // 返回属性值
-        return Reflect.get(target, key, receiver)
-    }
-})
+function reactive(obj) {
+    return new Proxy(obj, {
+        get (target, key, receiver) {
+            // 依赖收集
+            track(target, key)
+            // 返回属性值
+            return Reflect.get(target, key, receiver)
+        }
+    })
+}
 ```
 
 ### 拦截 in 操作符
@@ -41,21 +54,21 @@ const p = new Proxy(obj, {
 
 而 [[HasProperty]] 方法对应的陷阱函数叫 has，因此我们可以通过 has 陷阱函数实现对 in 操作符的拦截：
 ```js
-const obj = { foo: 1 }
+function reactive(obj) {
+    return new Proxy(obj, {
+        get (target, key, receiver) {
+            // 依赖收集
+            track(target, key)
+            // 返回属性值
+            return Reflect.get(target, key, receiver)
+        },
 
-const p = new Proxy(obj, {
-    get (target, key, receiver) {
-        // 依赖收集
-        track(target, key)
-        // 返回属性值
-        return Reflect.get(target, key, receiver)
-    },
-
-    has (target, key, receiver) {
-        track(target, key)
-        return Reflect.has(target, key, receiver)
-    }
-})
+        has (target, key, receiver) {
+            track(target, key)
+            return Reflect.has(target, key, receiver)
+        }
+    })
+}
 ```
 
 ### 拦截 for...in 循环
@@ -88,6 +101,27 @@ const p = new Proxy(obj, {
         return Reflect.ownKeys(target)
     }
 })
+
+function reactive(obj) {
+    return new Proxy(obj, {
+        get (target, key, receiver) {
+            // 依赖收集
+            track(target, key)
+            // 返回属性值
+            return Reflect.get(target, key, receiver)
+        },
+
+        has (target, key, receiver) {
+            track(target, key)
+            return Reflect.has(target, key, receiver)
+        },
+
+        ownKeys (target) {
+            track(target, ITERATE_KEY)
+            return Reflect.ownKeys(target)
+        }
+    })
+}
 ```
 拦截 ownKeys 操作即可间接拦截 for...in 循环。
 
