@@ -3,7 +3,7 @@
 
 ## 思路
 ### watch
-所谓 watch，本质就是观测一个响应式数据，数据发生变化时通知并指定响应的回调函数。watch 的实现本质上就是利用了 effect 以及 options.scheduler 选项，下面是最简单的实现：
+所谓 watch，本质就是观测一个响应式数据，数据发生变化时通知并执行相应的回调函数。watch 的实现本质上就是利用了 effect 以及 options.scheduler 选项，下面是最简单的实现：
 ```js
 function watch(source, cb) {
     effect(
