@@ -66,7 +66,7 @@ watch(obj, () => {
 })
 ```
 当 flush 值为 'post' 时，代表等待 DOM 更新结束后执行。因此，在监听的响应式数据有变化时候，我们需要将副作用函数放到一个微任务队列中执行：
-```js{23-32}
+```js
 function watch(source, cb, options = {}) {
     let getter
     if (typeof source === 'function') {
