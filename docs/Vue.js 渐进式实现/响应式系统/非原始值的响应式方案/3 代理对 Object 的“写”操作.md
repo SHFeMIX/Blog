@@ -32,7 +32,7 @@ function reactive(obj) {
 修改和新增对象的属性都是使用 set 陷阱函数拦截，但是只有新增属性会影响 for..in 的结果。
 
 因此我们需要在 set 函数中区分具体是修改还是新增，只有新增才需要触发与 ITERATE_KEY 相关联的副作用函数重新执行：
-```js{3-4,8-9,28-36}
+```js{4-5,9-10,30-38}
 function reactive(obj) {
     return new Proxy(obj, {
         set(target, key, value, receiver) {
@@ -89,7 +89,7 @@ function trigger(target, key, type) {
 如何代理 delete 操作符呢？还是看规范，规范的 13.5.1.2 节中明确定义了 delete 操作符的行为（太长了不放了）。
 
 由此可知，delete 操作符的行为依赖 [[Delete]] 内部方法，该内部方法使用 deteleProperty 陷阱函数拦截：
-```js{15-28,46-47}
+```js{15-28,45-46}
 function reactive(obj) {
     return new Proxy(obj, {
         set(target, key, value, receiver) {
