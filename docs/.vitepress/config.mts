@@ -210,7 +210,8 @@ export default defineConfig({
               { text: '理解 Proxy 和 Reflect', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/1 理解 Proxy 和 Reflect.md' },
               { text: '代理对 Object 的“读”操作', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/2 代理对 Object 的“读”操作.md'},
               { text: '代理对 Object 的“写”操作', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/3 代理对 Object 的“写”操作.md'},
-              { text: '合理地触发响应', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/4 合理地触发响应.md'}
+              { text: '合理地触发响应', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/4 合理地触发响应.md'},
+              { text: '浅响应与深响应', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/5 浅响应与深响应.md'}
             ]
           },
           {
