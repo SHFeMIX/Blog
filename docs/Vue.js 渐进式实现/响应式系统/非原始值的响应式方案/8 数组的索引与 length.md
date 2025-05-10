@@ -214,4 +214,4 @@ function trigger(target, key, type, newVal) {
 * 设置 length 属性时，会删除索引值大于等于新 length 的元素，触发这些元素相关联的副作用函数重新执行。
 
 ## 缺陷/待实现
-下一节中我们将实现对遍历数组操作的代理，包括 for...in 和 for...of。
+下一节中我们将开始实现对遍历数组操作的代理，包括 for...in 和 for...of。
