@@ -32,7 +32,7 @@ function createReactive(obj, isShallow = false. isReadonly = false) {
 * 添加新元素：arr[100] = 'bar'。
 * 修改数组长度：arr.length = 0。
 
-其实，无论是添加新元素还是直接修改数组2长度，本质上都是因为修改了数组的 length 属性。一旦数组的 length 属性被修改，那么 for...in 循环对数组的遍历结果就会改变，所以这时我们应该触发响应。
+其实，无论是添加新元素还是直接修改数组长度，本质上都是因为修改了数组的 length 属性。一旦数组的 length 属性被修改，那么 for...in 循环对数组的遍历结果就会改变，所以这时我们应该触发响应。
 
 因此，我们可以在 ownKeys 拦截函数内判断当前操作目标是否是数组，如果是，则使用 length 作为 key 去建立响应联系：
 ```js{4}
