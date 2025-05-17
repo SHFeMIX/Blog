@@ -217,7 +217,7 @@ export default defineConfig({
               { text: '数组的索引与 length', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/8 数组的索引与 length.md'},
               { text: 'for...in 遍历数组', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/9 for...in 遍历数组.md'},
               { text: 'for...of 遍历数组', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/10 for...of 遍历数组.md'},
-    
+              { text: '数组的查找方法', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/11 数组的查找方法.md'},
             ]
           },
           {
