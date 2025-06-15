@@ -93,6 +93,7 @@ const p = new Proxy(s, {
         if (key === 'delete') {
             return target[key].bind(target)
         }
+        
         return Reflect.get(target, key, receiver)
     }
 })
