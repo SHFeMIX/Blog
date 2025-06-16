@@ -219,7 +219,8 @@ export default defineConfig({
               { text: 'for...of 遍历数组', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/10 for...of 遍历数组.md'},
               { text: '数组的查找方法', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/11 数组的查找方法.md'},
               { text: '隐式修改数组长度的方法', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/12 隐式修改数组长度的方法.md'},
-              { text: '如何代理 Set 和 Map', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/13 如何代理 Set 和 Map.md'}
+              { text: '如何代理 Set 和 Map', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/13 如何代理 Set 和 Map.md'},
+              { text: 'Set 和 Map 建立响应联系', link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/14 Set 和 Map 建立响应联系.md'}
             ]
           },
           {

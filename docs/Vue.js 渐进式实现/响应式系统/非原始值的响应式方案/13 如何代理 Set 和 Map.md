@@ -41,7 +41,7 @@ console.log(p.size) // 报错 TypeError: Method get Set.prototype.size called on
 
 通过查阅规范，我们发现，Set.prototype.size 是一个访问器属性，而它在执行过程中会检测当前的 this 值内部是都存在内部槽 [[SetData]]，如果不存在就会抛出错误。由于我们是通过代理对象 p 来访问 size 属性，所以 this 自然就是代理对象，而代理对象不存在 [[SetData]] 这个内部槽，因此报错。
 
-为了修复这个问题，我们需要修正防蚊器属性的 getter 函数执行时的 this 指向：
+为了修复这个问题，我们需要修正访问器属性的 getter 函数执行时的 this 指向：
 ```js
 const s = new Set([1, 2, 3])
 const p = new Proxy(s, {
@@ -90,11 +90,7 @@ const p = new Proxy(s, {
             return Reflect.get(target, key, target)
         }
 
-        if (key === 'delete') {
-            return target[key].bind(target)
-        }
-        
-        return Reflect.get(target, key, receiver)
+        return target[key].bind(target)
     }
 })
 ```
