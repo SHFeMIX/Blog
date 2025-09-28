@@ -23,7 +23,8 @@ hero:
       text: Pro Git
       link: '/pro-git/1 起步/1.3 Git是什么.md'
     - theme: brand
-      text: Vue3 + Vite + TS 浏览器插件开发手册
+      text: 前端工程化的万法之源
+      link: /前端工程化的万法之源/Node.js/Node 模块查找策略.md
   image:
       src: https://vitepress.dev/vitepress-logo-large.webp
       alt: VitePress
@@ -33,7 +34,5 @@ features:
     details: 基础技术是最值得你投入学习的，这个世界上没有什么东西比基础更值得花时间。 —— 左耳朵耗子。
   - title: 
     details: 学习就要学一手的资料，不要学二手的。 —— 左耳朵耗子。
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 

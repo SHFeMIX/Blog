@@ -30,7 +30,8 @@ export default defineConfig({
         ],
         activeMatch: '/chrome-devtools/'
       },
-      { text: 'Git', link: '/pro-git/1 起步/1.3 Git是什么.md' }
+      { text: 'Git', link: '/pro-git/1 起步/1.3 Git是什么.md' },
+      { text: '前端工程化', link: '/前端工程化的万法之源/Node.js/Node 模块查找策略.md'}
     ],
 
     sidebar: {
@@ -241,6 +242,14 @@ export default defineConfig({
         {
           text: '编译器',
           items: []
+        }
+      ],
+      '前端工程化的万法之源': [
+        {
+          text: 'Node.js',
+          items: [
+            { text: 'Node 模块查找策略', link: '/前端工程化的万法之源/Node.js/Node 模块查找策略.md' },
+          ]
         }
       ]
     },
