@@ -1,7 +1,7 @@
 # Node 模块查找策略
 
-## 解析算法
-下面我们将通过实现一个函数 **ESM_RESOLVE** 来模拟 Node.js 加载 ES modules 标识符的算法，它会返回解析模块标识符得到的相对于父级 URL 的 URL。
+## 标识符解析算法
+下面我们将通过实现一个函数 **ESM_RESOLVE** 来模拟 Node.js 解析 ES modules 标识符的算法，它会返回解析模块标识符得到的相对于父级 URL 的 URL。
 
 ```js
 const defaultConditions = ['node', 'import']
