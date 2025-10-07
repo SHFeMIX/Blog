@@ -1,9 +1,13 @@
 # watch 的基本实现原理
+
 上一节中我们实现了完整的计算属性功能，这一节开始我们来实现 watch。
 
 ## 思路
+
 ### watch
+
 所谓 watch，本质就是观测一个响应式数据，数据发生变化时通知并执行相应的回调函数。watch 的实现本质上就是利用了 effect 以及 options.scheduler 选项，下面是最简单的实现：
+
 ```js
 function watch(source, cb) {
     effect(
@@ -25,9 +29,11 @@ function watch(source, cb) {
 ```
 
 ### 递归读取完整对象
+
 然而现在的实现有一个问题，我们硬编码了对 source.foo 的读取，也就是说现在只能监听 obj.foo 的改变。实际上我们希望的是监听的是整个 source 对象的改变，也就是说当 source 对象的任意属性发生变化时，都会触发 cb 的执行。
 
 因此我们需要封装一个通用的读取操作：
+
 ```js{3,12-27}
 function watch(source, cb) {
     effect(
@@ -57,10 +63,13 @@ function traverse(value, seen = new Set()) {
     return value
 }
 ```
+
 如上述代码所示，在 watch 内部 的 effect 中调用 traverse 函数递归读取对象的每一个属性，使得任意属性发生变化时都能触发回调函数执行。
 
 ### 支持接收 getter
+
 watch 函数除了可以观测响应式数据，还支持接收一个 getter 函数。在 getter 函数内部，用户可以指定该 watch 监听哪些响应式数据。：
+
 ```js
 watch(
     () => source.foo,
@@ -71,6 +80,7 @@ watch(
 ```
 
 实现这一功能的代码如下：
+
 ```js{2-7,10-11}
 function watch(source, cb) {
     let getter
@@ -93,7 +103,9 @@ function watch(source, cb) {
 ```
 
 ### 获取新值和旧值
+
 在使用 Vue.js 的 watch 时，有一个非常重要的功能，那就是能够在回调函数中得到变化前后的值：
+
 ```js
 watch(
     () => source.foo,
@@ -102,7 +114,9 @@ watch(
     }
 )
 ```
+
 实现这一功能，需要充分利用 effect 函数的 lazy 选项。每次监听的数据更新时手动调用 effect 函数的返回值 effectFn 获取更新后的响应式数据的值，而上一次调用 effectFn 的结果则作为旧值：
+
 ```js{9,11-12,16,18-23,28-29}
 function watch(source, cb) {
     let getter
@@ -135,12 +149,16 @@ function watch(source, cb) {
     oldValue = effectFn()
 }
 ```
+
 上述代码最下面的部分，我们手动调用 effectFn 得到的返回值就是旧值，即第一次执行得到的值。当变化发生并触发 scheduler 调度函数执行时，会重新调用 effectFn 并得到新值。这样我们就拿到了新值和旧值，进而传给回调函数。最后不要忘了用新值更新旧值：oldValue = newValue，毕竟本次更新后的新值也是下一次更新后的旧值。
 
 ## 已实现
+
 目前我们实现了 watch 的基本功能，支持监听对象的任意属性变化，也支持接收 getter 函数，并且回调函数中也能获取到监听的数据的新值和旧值。
 
 ## 缺陷/待实现
+
 下一节我们将实现关于 watch 的两个特性：
+
 * 立即执行的回调函数
 * 回调函数执行时机
