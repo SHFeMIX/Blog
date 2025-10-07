@@ -15,8 +15,8 @@ export default defineConfig({
       { text: 'JavaScript', link: '/' },
       {
         text: 'CSS',
-        link: '/CSS权威指南/如何看待CSS.md',
-        activeMatch: '/CSS权威指南/'
+        link: '/CSS 权威指南/如何看待 CSS.md',
+        activeMatch: '/CSS 权威指南/'
       },
       {
         text: 'Vue.js 渐进式实现',
@@ -104,79 +104,79 @@ export default defineConfig({
           ]
         }
       ],
-      '/CSS权威指南/': [
-        { text: '如何看待 CSS', link: '/CSS权威指南/如何看待CSS.md' },
+      '/CSS 权威指南/': [
+        { text: '如何看待 CSS', link: '/CSS 权威指南/如何看待 CSS.md' },
         {
           text: 'CSS 与文档',
           items: [
-            { text: '元素', link: '/CSS权威指南/1 CSS与文档/1.2 元素.md' },
-            { text: '把 CSS 应用到 HTML 上', link: '/CSS权威指南/1 CSS与文档/1.3 把CSS应用到HTML上.md' },
-            { text: '样式表中的内容', link: '/CSS权威指南/1 CSS与文档/1.4 样式表中的内容' },
-            { text: '媒体查询', link: '/CSS权威指南/1 CSS与文档/1.5 媒体查询.md' },
-            { text: '特性查询', link: '/CSS权威指南/1 CSS与文档/1.6 特性查询.md' },
+            { text: '元素', link: '/CSS 权威指南/1 CSS 与文档/1.2 元素.md' },
+            { text: '把 CSS 应用到 HTML 上', link: '/CSS 权威指南/1 CSS 与文档/1.3 把CSS应用到HTML上.md' },
+            { text: '样式表中的内容', link: '/CSS 权威指南/1 CSS 与文档/1.4 样式表中的内容.md' },
+            { text: '媒体查询', link: '/CSS 权威指南/1 CSS 与文档/1.5 媒体查询.md' },
+            { text: '特性查询', link: '/CSS 权威指南/1 CSS 与文档/1.6 特性查询.md' },
           ]
         },
         {
           text: 'CSS 选择器',
           items: [
-            { text: '样式的基本规则', link: '/CSS权威指南/2 CSS选择器/2.1 样式的基本规则.md' },
-            { text: '群组选择器', link: '/CSS权威指南/2 CSS选择器/2.2 群组选择器.md' },
-            { text: '类选择器与ID选择器', link: '/CSS权威指南/2 CSS选择器/2.3 类选择器与ID选择器.md' },
-            { text: '属性选择器', link: '/CSS权威指南/2 CSS选择器/2.4 属性选择器.md' },
-            { text: '文档结构选择器', link: '/CSS权威指南/2 CSS选择器/2.5 文档结构选择器.md' },
-            { text: '伪类选择器', link: '/CSS权威指南/2 CSS选择器/2.6 伪类选择器.md' },
-            { text: '伪元素选择器', link: '/CSS权威指南/2 CSS选择器/2.7 伪元素选择器.md' },
-            { text: '小结', link: '/CSS权威指南/2 CSS选择器/2.8 小结.md' },
+            { text: '样式的基本规则', link: '/CSS 权威指南/2 CSS 选择器/2.1 样式的基本规则.md' },
+            { text: '群组选择器', link: '/CSS 权威指南/2 CSS 选择器/2.2 群组选择器.md' },
+            { text: '类选择器与ID选择器', link: '/CSS 权威指南/2 CSS 选择器/2.3 类选择器与ID选择器.md' },
+            { text: '属性选择器', link: '/CSS 权威指南/2 CSS 选择器/2.4 属性选择器.md' },
+            { text: '文档结构选择器', link: '/CSS 权威指南/2 CSS 选择器/2.5 文档结构选择器.md' },
+            { text: '伪类选择器', link: '/CSS 权威指南/2 CSS 选择器/2.6 伪类选择器.md' },
+            { text: '伪元素选择器', link: '/CSS 权威指南/2 CSS 选择器/2.7 伪元素选择器.md' },
+            { text: '小结', link: '/CSS 权威指南/2 CSS 选择器/2.8 小结.md' },
           ]
         },
         {
           text: '特指度和层叠',
           items: [
-            { text: '特指度', link: '/CSS权威指南/3 特指度和层叠/3.1 特指度.md' },
-            { text: '继承', link: '/CSS权威指南/3 特指度和层叠/3.2 继承.md' },
-            { text: '层叠', link: '/CSS权威指南/3 特指度和层叠/3.3 层叠.md' },
+            { text: '特指度', link: '/CSS 权威指南/3 特指度和层叠/3.1 特指度.md' },
+            { text: '继承', link: '/CSS 权威指南/3 特指度和层叠/3.2 继承.md' },
+            { text: '层叠', link: '/CSS 权威指南/3 特指度和层叠/3.3 层叠.md' },
           ]
         },
         {
           text: '值和单位',
           items: [
-            { text: '关键字、字符串和其他文本值', link: '/CSS权威指南/4 值和单位/4.1 关键字、字符串和其他文本值.md' },
-            { text: '长度单位', link: '/CSS权威指南/4 值和单位/4.3 长度单位.md' },
-            { text: '计算值', link: '/CSS权威指南/4 值和单位/4.4 计算值.md' },
-            { text: '属性值', link: '/CSS权威指南/4 值和单位/4.5 属性值.md' },
-            { text: '颜色值', link: '/CSS权威指南/4 值和单位/4.6 颜色值.md' },
-            { text: '角度值', link: '/CSS权威指南/4 值和单位/4.7 角度值.md' },
-            { text: '时间和频率', link: '/CSS权威指南/4 值和单位/4.8 时间和频率.md' },
-            { text: '位置', link: '/CSS权威指南/4 值和单位/4.9 位置.md' },
-            { text: '自定义值', link: '/CSS权威指南/4 值和单位/4.10 自定义值.md' },
+            { text: '关键字、字符串和其他文本值', link: '/CSS 权威指南/4 值和单位/4.1 关键字、字符串和其他文本值.md' },
+            { text: '长度单位', link: '/CSS 权威指南/4 值和单位/4.3 长度单位.md' },
+            { text: '计算值', link: '/CSS 权威指南/4 值和单位/4.4 计算值.md' },
+            { text: '属性值', link: '/CSS 权威指南/4 值和单位/4.5 属性值.md' },
+            { text: '颜色值', link: '/CSS 权威指南/4 值和单位/4.6 颜色值.md' },
+            { text: '角度值', link: '/CSS 权威指南/4 值和单位/4.7 角度值.md' },
+            { text: '时间和频率', link: '/CSS 权威指南/4 值和单位/4.8 时间和频率.md' },
+            { text: '位置', link: '/CSS 权威指南/4 值和单位/4.9 位置.md' },
+            { text: '自定义值', link: '/CSS 权威指南/4 值和单位/4.10 自定义值.md' },
           ]
         },
         {
           text: '字体',
           items: [
-            { text: '字体族', link: '/CSS权威指南/5 字体/5.1 字体族.md' },
-            { text: '自定义字体', link: '/CSS权威指南/5 字体/5.2 自定义字体.md' },
+            { text: '字体族', link: '/CSS 权威指南/5 字体/5.1 字体族.md' },
+            { text: '自定义字体', link: '/CSS 权威指南/5 字体/5.2 自定义字体.md' },
           ]
         },
         {
           text: '变形',
           items: [
-            { text: '什么是变形', link: '/CSS权威指南/16 变形/什么是变形.md' },
-            { text: '坐标系', link: '/CSS权威指南/16 变形/16.1 坐标系.md' },
-            { text: '变形主属性', link: '/CSS权威指南/16 变形/16.2 变形主属性.md' },
-            { text: '其他变形属性', link: '/CSS权威指南/16 变形/16.3 其他变形属性.md' }
+            { text: '什么是变形', link: '/CSS 权威指南/16 变形/什么是变形.md' },
+            { text: '坐标系', link: '/CSS 权威指南/16 变形/16.1 坐标系.md' },
+            { text: '变形主属性', link: '/CSS 权威指南/16 变形/16.2 变形主属性.md' },
+            { text: '其他变形属性', link: '/CSS 权威指南/16 变形/16.3 其他变形属性.md' }
           ]
         },
         {
           text: '动画',
           items: [
-            { text: '什么是动画', link: '/CSS权威指南/18 动画/什么是动画.md' },
-            { text: '定义关键帧', link: '/CSS权威指南/18 动画/18.1 定义关键帧.md' },
-            { text: '关键帧选择符', link: '/CSS权威指南/18 动画/18.3 关键帧选择符.md' },
-            { text: '把动画应用到元素上', link: '/CSS权威指南/18 动画/18.4 把动画应用到元素上.md' },
-            { text: '写为一个属性', link: '/CSS权威指南/18 动画/18.5 写为一个属性.md' },
-            { text: '动画、特指度和优先顺序', link: '/CSS权威指南/18 动画/18.6 动画、特指度和优先顺序.md' },
-            { text: 'CSS 动画实现时钟', link: '/CSS权威指南/18 动画/CSS 动画实现时钟.md' }
+            { text: '什么是动画', link: '/CSS 权威指南/18 动画/什么是动画.md' },
+            { text: '定义关键帧', link: '/CSS 权威指南/18 动画/18.1 定义关键帧.md' },
+            { text: '关键帧选择符', link: '/CSS 权威指南/18 动画/18.3 关键帧选择符.md' },
+            { text: '把动画应用到元素上', link: '/CSS 权威指南/18 动画/18.4 把动画应用到元素上.md' },
+            { text: '写为一个属性', link: '/CSS 权威指南/18 动画/18.5 写为一个属性.md' },
+            { text: '动画、特指度和优先顺序', link: '/CSS 权威指南/18 动画/18.6 动画、特指度和优先顺序.md' },
+            { text: 'CSS 动画实现时钟', link: '/CSS 权威指南/18 动画/CSS 动画实现时钟.md' }
           ]
         }
       ],

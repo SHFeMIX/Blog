@@ -112,7 +112,7 @@ function track(target, key) {
     // 没有 activeEffect 直接 return
     if (!activeEffect) return terget[key]
 
-    // 根据 target 从“桶”中取得 depsMap，也是Map类型：key --> effects
+    // 根据 target 从“桶”中取得 depsMap，也是 Map 类型：key --> effects
     let depsMap = bucket.get(target)
     // 如果不存在 depsMap，就新建一个 Map 并与 target 关联
     if (!depsMap) {
@@ -121,7 +121,7 @@ function track(target, key) {
     }
 
     // 再根据 key 从 depsMap 中取得 deps。
-    // deps是一个 Set 类型，储存所有与当前 key 相关联的副作用函数
+    // deps 是一个 Set 类型，储存所有与当前 key 相关联的副作用函数
     let deps = depsMap.get(key)
     // 如果 deps 不存在，同样新建一个 Set 并与 key 关联
     if (!deps) {
@@ -143,7 +143,7 @@ function trigger(target, key) {
     if (!depsMap) return
 
     const effects = depsMap.get(key)
-    // 如果这个对象的这个key没有被追踪的依赖，没有需要重新运行的副作用函数，啥也不干
+    // 如果这个对象的这个 key 没有被追踪的依赖，没有需要重新运行的副作用函数，啥也不干
     // 否则就把 effects 中的函数依次执行
     const effectsToRun = new Set(effects)
     // 为了避免无限循环

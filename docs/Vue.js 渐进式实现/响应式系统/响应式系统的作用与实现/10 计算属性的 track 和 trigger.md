@@ -26,7 +26,7 @@ obj.foo ++
 
 什么时候依赖收集？读取计算属性的返回值 obj 的 value 属性的时候。
 
-什么时候触发更新？当计算属性的依赖有更新时会执行计算属性内传给 effect 函数的 options 参数的 sechduler 函数，把dirty 置为 true，此时应触发更新。
+什么时候触发更新？当计算属性的依赖有更新时会执行计算属性内传给 effect 函数的 options 参数的 sechduler 函数，把 dirty 置为 true，此时应触发更新。
 
 ## 代码
 

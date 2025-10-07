@@ -88,9 +88,9 @@ function trigger(target, key, type) {
 }
 ```
 
-如上述代码所示，我们使用 Object.prototype.hasOwnProperty 检查当前操作的属性是否已存在于随想上。如果存在，当前操作类型为 ‘SET’，即修改属性值；否则操作类型为 ‘ADD’，即新增属性。最后，把type 也传递给 trigger 函数。
+如上述代码所示，我们使用 Object.prototype.hasOwnProperty 检查当前操作的属性是否已存在于随想上。如果存在，当前操作类型为 ‘SET’，即修改属性值；否则操作类型为 ‘ADD’，即新增属性。最后，把 type 也传递给 trigger 函数。
 
-在trigger 函数中，当操作类型 type 为  ADD 时，把与 ITERATE_KEY 相关联的副作用函数也加入到 effectsToRun 中。这样，只有当新增属性时，才会触发与 ITERATE_KEY 相关联的副作用函数重新执行。
+在 trigger 函数中，当操作类型 type 为  ADD 时，把与 ITERATE_KEY 相关联的副作用函数也加入到 effectsToRun 中。这样，只有当新增属性时，才会触发与 ITERATE_KEY 相关联的副作用函数重新执行。
 
 ## 拦截删除属性
 

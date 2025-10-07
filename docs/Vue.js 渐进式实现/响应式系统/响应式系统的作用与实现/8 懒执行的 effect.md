@@ -34,7 +34,7 @@ function effect(fn, options = {}) {
 
 通过判断 options.lazy，实现了让副作用函数不立即执行的功能。但是到底什么时候执行呢？
 
-从上述代码可以看出，我们将 包装了真实副作用函数 fn 的 effectFn 函数返回，这样外部就能拿到effectFn，在需要的时候手动调用。
+从上述代码可以看出，我们将 包装了真实副作用函数 fn 的 effectFn 函数返回，这样外部就能拿到 effectFn，在需要的时候手动调用。
 
 ```js
 const effectFn = effect(() => cosole.log('lazy effect'), { lazy: true })
@@ -87,7 +87,7 @@ function effect(fn, options = {}) {
 }
 ```
 
-传递给 effect 函数的参数 fn 才是真正的副作用函数。现在我们实现了在外部手动调用 effect 函数的返回值 effectFn 时能获取到真实副作用函数 fn 的返回值（调用 effect 获取到 effectFn ，调用effectFn 获取到 fn 的返回值）。
+传递给 effect 函数的参数 fn 才是真正的副作用函数。现在我们实现了在外部手动调用 effect 函数的返回值 effectFn 时能获取到真实副作用函数 fn 的返回值（调用 effect 获取到 effectFn ，调用 effectFn 获取到 fn 的返回值）。
 
 ## 已实现
 

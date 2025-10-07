@@ -15,7 +15,7 @@ function watch(source, cb) {
         () => source.foo,
         {
             scheduler() {
-                // source 有变化时，执行cb
+                // source 有变化时，执行 cb
                 cb()
                 /*
                 其实这里应该执行一次传递给 scheduler 的副作用函数，不然无法解决分支切换遗留副作用函数的问题  

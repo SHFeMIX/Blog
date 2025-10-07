@@ -16,7 +16,7 @@
 
 ### reactive
 
-开始之前，为了后续讲解方便，我们需要封装一个reactive 函数。
+开始之前，为了后续讲解方便，我们需要封装一个 reactive 函数。
 
 reactive 函数接收一个对象作为参数，返回为其创建的响应式数据：
 
@@ -81,7 +81,7 @@ function reactive(obj) {
 
 ### 拦截 for...in 循环
 
-在 ECMA-262 规范的 14.7.5.6中定义了 for...in 循环的执行规则，太长了就不放了。
+在 ECMA-262 规范的 14.7.5.6 中定义了 for...in 循环的执行规则，太长了就不放了。
 
 其中关键点在于 EnumerateObjectProperties 这个抽象方法，代码太长了也不放了。
 
@@ -116,7 +116,7 @@ function reactive(obj) {
 
 拦截 ownKeys 操作即可间接拦截 for...in 循环。
 
-为什么我们要使用 ITERATE_KEY 作为追踪的key，因为在 ownKeys 中无法获取到具体操作的 key。ownKeys 用来获取一个对象的所有属于自己的键，这个操作明显不与任何具体的键绑定，因此我们只能用 Symbol 构造一个唯一 key 作为标识。
+为什么我们要使用 ITERATE_KEY 作为追踪的 key，因为在 ownKeys 中无法获取到具体操作的 key。ownKeys 用来获取一个对象的所有属于自己的键，这个操作明显不与任何具体的键绑定，因此我们只能用 Symbol 构造一个唯一 key 作为标识。
 
 ## 已实现
 

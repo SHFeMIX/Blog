@@ -31,7 +31,7 @@ function createReactive(obj, isShallow = false. isReadonly = false) {
 }
 ```
 
-这段代码是我们目前的实现，为了追踪对普通对象的 for...in 操作，人为创造了 ITERATE_KEY 作为追踪的key。对于普通对象来说，只有当添加或删除属性时才会影响 for...in 循环的结果，所以当添加或删除操作发生时，我们需要取出与 ITERATE_KEY 相关联的副作用函数重新执行。
+这段代码是我们目前的实现，为了追踪对普通对象的 for...in 操作，人为创造了 ITERATE_KEY 作为追踪的 key。对于普通对象来说，只有当添加或删除属性时才会影响 for...in 循环的结果，所以当添加或删除操作发生时，我们需要取出与 ITERATE_KEY 相关联的副作用函数重新执行。
 
 然而对于数组，情况有所不同，我们看看哪些操作会影响 for...in 循环对数组的遍历结果：
 

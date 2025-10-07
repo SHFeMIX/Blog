@@ -12,7 +12,7 @@ hero:
       link: /
     - theme: brand
       text: CSS 权威指南
-      link: /CSS权威指南/如何看待CSS.md
+      link: /CSS 权威指南/如何看待 CSS.md
     - theme: brand
       text: Vue.js 渐进式实现
       link: /Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/0 响应式数据基本实现.md
@@ -21,7 +21,7 @@ hero:
       link: /chrome-devtools/开始/简介.md
     - theme: brand
       text: Pro Git
-      link: '/pro-git/1 起步/1.3 Git是什么.md'
+      link: '/pro-git/1 起步/1.3 Git 是什么.md'
     - theme: brand
       text: 前端工程化的万法之源
       link: /前端工程化的万法之源/Node.js/模块查找策略.md
