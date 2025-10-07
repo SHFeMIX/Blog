@@ -1,7 +1,24 @@
-# Node 模块查找策略
+# Node.js 模块查找策略
 
-## 标识符解析算法
-下面我们将通过实现一个函数 **ESM_RESOLVE** 来模拟 Node.js 解析 ES modules 标识符的算法，它会返回解析模块标识符得到的相对于父级 URL 的 URL。
+模块查找策略指的是，当开发者在代码中使用 ```import``` 语句导入一个模块时，Node.js 如何根据模块标识符找到对应的模块文件。
+
+## 模块标识符
+
+在一个 ```import``` 导入语句中, **模块标识符**指的是关键字 ```from``` 后面跟着的字符串，例如 ```import { sep } from 'node:path``` 中的 ```node:path```。```export from``` 语句和 ```import()``` 表达式中也使用了标识符。
+
+模块标识符共有三种形式：
+
+* 相对标识符：例如 ```'./startup.js'``` 或者 ```'../config.mjs'```，指的是要导入的模块相对于当前文件的路径。注意，相对标识符必须包含文件扩展名。
+
+* 裸模块标识符：例如 ```'some-package'``` 或者 ```'some-package/shuffle'```，通过包名字指向包的主入口，或者包内某个具体的模块，就像第二个例子中所示的那样。只有导入的包的 ```packehs.json``` 文件中未指定 ```"exports"``` 字段时，裸模块标识符才必须包含文件扩展名。
+
+* 绝对标识符：例如 ```'file:///opt/nodejs/config.js'```，直接且明确地引用完整路径。
+
+裸模块标识符通过 [Node 模块标识符解析算法](#模块标识符解析算法) 处理，其他类型的标识符则直接根据 [URL 现行标准](https://url.spec.whatwg.org/) 进行解析。
+
+## 模块标识符解析算法
+
+下面我们将通过实现一个函数 **ESM_RESOLVE** 来模拟 Node 解析 ES modules 标识符的算法，它会返回解析模块标识符得到的相对于当前文件路径的 URL。
 
 ```js
 const defaultConditions = ['node', 'import']
@@ -17,7 +34,7 @@ function ESM_RESOLVE(specifier, parentURL) {
     }
     // 3. 如果标识符是 '/'、'./' 或者 '../' 开头
     else if (specifier.startsWith('/') || specifier.startsWith('./') || specifier.startsWith('../')) {
-        // 3.1 把 resolved 赋值为标识符相对于父级 URL 的解析结果
+        // 3.1 把 resolved 赋值为标识符相对于当前文件路径的解析结果
         resolved = resolveURL(specifier, parentURL)
     }
     // 4. 如果标识符是 ‘#’ 开头
