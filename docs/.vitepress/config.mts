@@ -22,6 +22,7 @@ export default defineConfig({
         text: 'Vue.js 渐进式实现',
         link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/0 响应式数据基本实现.md'
       },
+      { text: '前端工程化', link: '/前端工程化的万法之源/Node.js/模块查找策略.md'},
       {
         text: 'Chrome DevTools',
         items: [
@@ -31,7 +32,6 @@ export default defineConfig({
         activeMatch: '/chrome-devtools/'
       },
       { text: 'Git', link: '/pro-git/1 起步/1.3 Git是什么.md' },
-      { text: '前端工程化', link: '/前端工程化的万法之源/Node.js/模块查找策略.md'}
     ],
 
     sidebar: {
