@@ -250,6 +250,9 @@ export default defineConfig({
           items: [
             { text: '模块查找策略', link: '/前端工程化的万法之源/Node.js/模块查找策略.md' },
           ]
+        },
+        {
+          text: 'npm'
         }
       ]
     },
