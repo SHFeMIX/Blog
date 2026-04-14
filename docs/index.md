@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: JavaScript 高级程序设计
-      link: /
+      link: /JavaScript 高级程序设计/2 HTML中的JavaScript/2.1 <script>元素.md
     - theme: brand
       text: CSS 权威指南
       link: /CSS 权威指南/如何看待 CSS.md
@@ -21,7 +21,7 @@ hero:
       link: /chrome-devtools/开始/简介.md
     - theme: brand
       text: Pro Git
-      link: '/pro-git/1 起步/1.3 Git 是什么.md'
+      link: '/pro-git/1 起步/1.3 Git是什么.md'
     - theme: brand
       text: 前端工程化的万法之源
       link: /前端工程化的万法之源/Node.js/模块查找策略.md

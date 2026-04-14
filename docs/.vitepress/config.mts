@@ -12,7 +12,7 @@ export default defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: 'JavaScript', link: '/' },
+      { text: 'JavaScript', link: '/JavaScript 高级程序设计/2 HTML中的JavaScript/2.1 <script>元素.md' },
       {
         text: 'CSS',
         link: '/CSS 权威指南/如何看待 CSS.md',
@@ -266,6 +266,100 @@ export default defineConfig({
             { text: '写为一个属性', link: '/CSS 权威指南/18 动画/18.5 写为一个属性.md' },
             { text: '动画、特指度和优先顺序', link: '/CSS 权威指南/18 动画/18.6 动画、特指度和优先顺序.md' },
             { text: 'CSS 动画实现时钟', link: '/CSS 权威指南/18 动画/CSS 动画实现时钟.md' }
+          ]
+        }
+      ],
+      '/JavaScript 高级程序设计/': [
+        { text: 'HTML 中的 JavaScript', 
+          items: [
+            { text: 'script 元素', link: '/JavaScript 高级程序设计/2 HTML中的JavaScript/2.1 <script>元素.md'}
+          ]
+        },
+        {
+          text: '语言基础',
+          items: [
+            { text: '语法', link: '/JavaScript 高级程序设计/3 语言基础/3.1 语法.md' },
+            { text: '变量', link: '/JavaScript 高级程序设计/3 语言基础/3.3 变量.md' },
+            { text: '数据类型', link: '/JavaScript 高级程序设计/3 语言基础/3.4 数据类型.md' },
+            { text: '操作符', link: '/JavaScript 高级程序设计/3 语言基础/3.5 操作符.md' },
+            { text: '语句', link: '/JavaScript 高级程序设计/3 语言基础/3.6 语句.md' },
+          ]
+        },
+        {
+          text: '变量，作用域与内存',
+          items: [
+            { text: '原始值与引用值', link: '/JavaScript 高级程序设计/4 变量，作用域与内存/4.1 原始值与引用值.md' },
+            { text: '执行上下文与作用域', link: '/JavaScript 高级程序设计/4 变量，作用域与内存/4.2 执行上下文与作用域.md' },
+            { text: '垃圾回收', link: '/JavaScript 高级程序设计/4 变量，作用域与内存/4.3 垃圾回收.md' },
+            { text: '小结', link: '/JavaScript 高级程序设计/4 变量，作用域与内存/4.4 小结.md' }
+          ]
+        },
+        {
+          text: '基本引用类型',
+          items: [
+            { text: 'Date', link: '/JavaScript 高级程序设计/5 基本引用类型/5.1 Date.md' },
+            { text: 'RegExp', link: '/JavaScript 高级程序设计/5 基本引用类型/5.2 RegExp.md' },
+            { text: '原始包装类型', link: '/JavaScript 高级程序设计/5 基本引用类型/5.3 原始包装类型.md' },
+            { text: '单例包装类型', link: '/JavaScript 高级程序设计/5 基本引用类型/5.4 单例包装类型.md' },
+          ]
+        },
+        {
+          text: '集合引用类型',
+          items: [
+            { text: 'Object', link: '/JavaScript 高级程序设计/6 集合引用类型/6.1 Object.md' },
+            { text: 'Array', link: '/JavaScript 高级程序设计/6 集合引用类型/6.2 Array.md' },
+            { text: 'Map', link: '/JavaScript 高级程序设计/6 集合引用类型/6.4 Map.md' },
+            { text: 'WeakMap', link: '/JavaScript 高级程序设计/6 集合引用类型/6.5 WeakMap.md' },
+            { text: 'Set', link: '/JavaScript 高级程序设计/6 集合引用类型/6.6 Set.md' },
+            { text: 'WeakSet', link: '/JavaScript 高级程序设计/6 集合引用类型/6.7 WeakSet.md' },
+            { text: '迭代与扩展操作符', link: '/JavaScript 高级程序设计/6 集合引用类型/6.8 迭代与扩展操作符.md' },
+          ]
+        },
+        {
+          text: '迭代器与生成器',
+          items: [
+            { text: '理解迭代', link: '/JavaScript 高级程序设计/7 迭代器与生成器/7.1 理解迭代.md' },
+            { text: '迭代器模式', link: '/JavaScript 高级程序设计/7 迭代器与生成器/7.2 迭代器模式.md' },
+            { text: '生成器基础', link: '/JavaScript 高级程序设计/7 迭代器与生成器/7.3 生成器基础.md' },
+            { text: '小结', link: '/JavaScript 高级程序设计/7 迭代器与生成器/7.4 小结.md' }
+          ]
+        },
+        {
+          text: '对象，类与面向对象编程',
+          items: [
+            { text: '理解对象', link: '/JavaScript 高级程序设计/8 对象，类与面向对象编程/8.1 理解对象.md' },
+            { text: '创建对象', link: '/JavaScript 高级程序设计/8 对象，类与面向对象编程/8.2 创建对象.md' },
+            { text: '继承', link: '/JavaScript 高级程序设计/8 对象，类与面向对象编程/8.3 继承.md' },
+            { text: '类', link: '/JavaScript 高级程序设计/8 对象，类与面向对象编程/8.4 类.md' },
+            { text: '小结', link: '/JavaScript 高级程序设计/8 对象，类与面向对象编程/8.5 小结.md' }
+          ]
+        },
+        {
+          text: '代理与反射',
+          items: [
+            { text: '代理基础', link: '/JavaScript 高级程序设计/9 代理与反射/9.1 代理基础.md' },
+            { text: '代理捕获器与反射方法', link: '/JavaScript 高级程序设计/9 代理与反射/9.2 代理捕获器与反射方法.md' },
+          ]
+        },
+        {
+          text: '箭头函数',
+          items: [
+            { text: '箭头函数', link: '/JavaScript 高级程序设计/10 函数/10.1 箭头函数.md' },
+            { text: '函数名', link: '/JavaScript 高级程序设计/10 函数/10.2 函数名.md' },
+            { text: '理解参数', link: '/JavaScript 高级程序设计/10 函数/10.3 理解参数.md' },
+            { text: '没有重载', link: '/JavaScript 高级程序设计/10 函数/10.4 没有重载.md' },
+            { text: '默认参数值', link: '/JavaScript 高级程序设计/10 函数/10.5 默认参数值.md' },
+            { text: '参数的拓展与收集', link: '/JavaScript 高级程序设计/10 函数/10.6 参数的拓展与收集.md' },
+            { text: '函数声明与函数表达式', link: '/JavaScript 高级程序设计/10 函数/10.7 函数声明与函数表达式.md' },
+            { text: '函数作为值', link: '/JavaScript 高级程序设计/10 函数/10.8 函数作为值.md' },
+            { text: '函数内部', link: '/JavaScript 高级程序设计/10 函数/10.9 函数内部.md' },
+            { text: '函数属性和方法', link: '/JavaScript 高级程序设计/10 函数/10.10 函数属性和方法.md' },
+            { text: '函数表达式', link: '/JavaScript 高级程序设计/10 函数/10.11 函数表达式.md' },
+            { text: '递归', link: '/JavaScript 高级程序设计/10 函数/10.12 递归.md' },
+            { text: '尾调用优化', link: '/JavaScript 高级程序设计/10 函数/10.13 尾调用优化.md' },
+            { text: '闭包', link: '/JavaScript 高级程序设计/10 函数/10.14 闭包.md' },
+            { text: '立即调用函数表达式', link: '/JavaScript 高级程序设计/10 函数/10.15 立即调用函数表达式.md' },
+            { text: '私有变量', link: '/JavaScript 高级程序设计/10 函数/10.16 私有变量.md' },
           ]
         }
       ],
