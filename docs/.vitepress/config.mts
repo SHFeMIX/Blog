@@ -435,7 +435,10 @@ export default defineConfig({
           ]
         },
         {
-          text: 'npm'
+          text: 'npm',
+          items: [
+            { text: '包命令执行机制', link: '/前端工程化的万法之源/npm/包命令执行机制.md' },
+          ]
         }
       ]
     },
