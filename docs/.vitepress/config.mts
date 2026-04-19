@@ -20,7 +20,7 @@ export default defineConfig({
       },
       {
         text: 'Vue.js 渐进式实现',
-        link: '/Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/0 响应式数据基本实现.md'
+        link: '/Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/1 理解 Proxy 和 Reflect.md'
       },
       { text: '工程化万法之源', link: '/前端工程化的万法之源/Node.js/模块查找策略.md'},
       {

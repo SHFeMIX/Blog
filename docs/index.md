@@ -15,7 +15,7 @@ hero:
       link: /CSS 权威指南/如何看待 CSS.md
     - theme: brand
       text: Vue.js 渐进式实现
-      link: /Vue.js 渐进式实现/响应式系统/响应式系统的作用与实现/0 响应式数据基本实现.md
+      link: /Vue.js 渐进式实现/响应式系统/非原始值的响应式方案/1 理解 Proxy 和 Reflect.md
     - theme: brand
       text: Chrome DevTools 完全指南
       link: /chrome-devtools/开始/简介.md
